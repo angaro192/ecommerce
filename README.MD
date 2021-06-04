@@ -74,3 +74,59 @@ $ quasar dev
 # A aplicação será aberta na porta:8080 - acesse http://localhost:8080
 
 ```
+
+#### 🧭 Para Incluir novos produtos e novos usuarios (Backend)
+
+```bash
+# A aplicação ainda não esta finalizada, então algumas features só podem ser acessadas através das rotas.
+
+#Para cadastrar novos usuarios: 
+#Acesse pela rota POST /usuarios , passando JSON no body nesse formato
+{
+	"nome": "Nome do usuario/cliente",
+	"email": "email@email.com",
+	"senha": "senha",
+	"data_nascimento": "dd/mm/aaaa", // data de nascimento
+	"cpf": "123456789101", //cpf
+	"id_cargo": 3 // ID do cargo:  1 - Cliente,  2 - Administrador, 3 - Atendente, 4 - Vendedor
+}
+
+#Para cadastrar novos produtos: 
+#Acesse pela rota POST /produtos , passando JSON no body nesse formato
+{
+	"id_usuario": 9, // Id do usuario
+	"titulo": "Titulo do produto",
+	"foto": "link da todo do produto",
+	"qtd": 1, // Quantidade de produtos
+	"preco": 100, // Preço do produto
+	"descricao": "Descrição do produto"
+}
+
+#Para consulta de produtos: 
+#Acesse pela rota GET /produtos , passando JSON no body nesse formato
+# GET /produtos = retorna todos os produtos.
+# GET "/produtos/1" ou "/produtos/parte-do-titulo" = Irá retornar o produto especifico ou os produtos que tenham a palavra no titulo.
+
+#Para deletar produto:
+# DELETE /produto/id-produto = Deleta o produto.
+
+
+```
+
+#### 🧭 Para Incluir novos produtos e novos usuarios (Backend)
+
+```bash
+# A aplicação ainda não esta finalizada, então algumas features só funcionam acessando as rotas.
+
+#Para cadastrar novos produtos: 
+#Acesse pela rota POST /produtos , passando JSON no body nesse formato
+{
+	"id_usuario": 9, // Id do usuario
+	"titulo": "Titulo do produto",
+	"foto": "link da todo do produto",
+	"qtd": 1, // Quantidade de produtos
+	"preco": 100, // Preço do produto
+	"descricao": "Descrição do produto"
+}
+
+```
